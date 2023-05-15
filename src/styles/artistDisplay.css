@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 800px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 8px 8px #000000a7;
+    padding: 12px;
+    background-color: #282828;
+}
+.artist-image {
+    max-width: 400px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.artist-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.artist-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.genres {
+    margin-top: 0;
+    font-size: small;
+}

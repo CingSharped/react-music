@@ -1,0 +1,10 @@
+.songs-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.song {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

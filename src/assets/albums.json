@@ -1,0 +1,43 @@
+[
+        {
+            "title": "Hybrid Theory",
+            "release": "2000-10-24",
+            "cover-art": "https://upload.wikimedia.org/wikipedia/en/2/2a/Linkin_Park_Hybrid_Theory_Album_Cover.jpg",
+            "songs": ["Papercut", "One Step Closer", "With you", "Points of Authority", "Crawling", "Runaway", "By Myself", "In The End", "A Place for My Head", "Forgotten", "Cure for the itch", "Pushing Me Away"]
+        },
+        {
+            "title": "Meteora",
+            "release": "2003-03-25",
+            "cover-art": "https://upload.wikimedia.org/wikipedia/en/0/0c/Linkin_Park_Meteora_Album_Cover.jpg",
+            "songs": ["Foreword", "Dont Stay", "Somewhere I Belong", "Lying from You", "Hit the Floor", "Easier to Run", "Faint", "Figure 09", "Breaking the Habit", "From the Inside", "Nobodys Listening", "Session", "Numb"]
+        },
+        {
+            "title": "Minutes to Midnight",
+            "release": "2007-05-15",
+            "cover-art": "https://upload.wikimedia.org/wikipedia/en/7/7a/Minutes_to_Midnight_cover.jpg",
+            "songs": ["Wake", "Given Up", "Leave Out All The Rest", "Bleed It Out", "Shadow of the Day", "What Ive Done", "Hands Held High", "No More Sorrow", "Valentines Day", "In Between", "In Pieces", "The Little Things Give You Away"]
+        },
+        {
+            "title": "A Thousand Suns",
+            "release": "2010-09-14",
+            "cover-art": "https://upload.wikimedia.org/wikipedia/en/a/af/A_Thousand_Suns_Cover2.jpg",
+            "songs": ["The Requiem", "The Radiance", "Burning in the Skies", "Empty Spaces", "When They Come for Me", "Robot Boy", "Jomada Del Muerto", "Waiting for the End", "Bloackout", "Wretches and Kings", "Wisdom Justice and Love", "Iridescent", "Fallout", "The Catalyst", "The Messenger"]
+        },
+        {
+            "title": "Living Things",
+            "release": "2012-06-26",
+            "cover-art": "https://upload.wikimedia.org/wikipedia/en/c/c9/Linkin_Park_-_Living_Things.jpg",
+            "songs": ["Lost in the Echo", "In My Remains", "Burn It Down", "Lies Greed Misery", "Ill Be Gone", "Castle of Glass", "Victimized", "Roads Untraveled", "Skin to Bone", "Unit It Breaks", "Tinfoil", "Powerless"]
+        },
+        {
+            "title": "The Hunting Party",
+            "release": "2014-06-17",
+            "cover-art": "https://upload.wikimedia.org/wikipedia/en/f/fa/Linkin_Park%2C_The_Hunting_Party%2C_album_art_final.jpg",
+            "songs": ["Keys to the Kingdom", "All for Nothing", "Guilty All the Same", "The Summoning", "War", "Wastelands", "Until its Gone", "Rebellion", "Mark the Grave", "Drawbar", "Final Masquerade", "A Line in the Sand"]
+        },
+        {
+            "title": "One More Light",
+            "release": "2017-05-19",
+            "cover-art": "https://upload.wikimedia.org/wikipedia/en/b/b2/Linkin_Park%2C_One_More_Light%2C_album_art_final.jpeg",
+            "songs": ["Nobody Can Save Me", "Good Goodbye", "Talking to Myself", "Battle Symphony", "Invisible", "Heavy", "Sorry for Now", "Halfway Right", "One More Light", "Sharp Edges"]
+        }]

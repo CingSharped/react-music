@@ -1,0 +1,7 @@
+.likes-container {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 2px;
+    justify-content: center;
+}

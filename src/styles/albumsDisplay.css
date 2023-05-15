@@ -1,0 +1,11 @@
+.albums-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.card {
+    max-width: 250px;
+    margin: 10px;
+}
