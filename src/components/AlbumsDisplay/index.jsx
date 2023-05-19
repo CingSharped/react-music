@@ -8,6 +8,7 @@ const AlbulmsDisplay = () => {
 
   return (
     <>
+    {console.log(selectedAlbum.songs)}
       <h2>Albums</h2>
       <div className="albums-container">
         {albums.map((album, key) => {

@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actionCreators from "../../action-creators/likedSongs";
 import "./style.css"
 // import likedLogo from '../../assets/'
 
@@ -6,6 +9,11 @@ const LikesDisplay = ({ song, likes }) => {
   const [currentLikes, setCurrentLikes] = useState(parseInt(likes))
   const [currentSong, setCurrentSong] = useState(song)
   const [liked, setLiked] = useState(false)
+
+  const dispatch = useDispatch()
+  const likedSongs = useSelector(state => state.likedSongs)
+  const { addLikedSong, removeLikedSong } = bindActionCreators(actionCreators, dispatch)
+  console.log(likedSongs)
 
   useEffect(() => {
     setCurrentSong(song)
