@@ -1,23 +1,40 @@
 import { useState, useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actionCreators from "../../action-creators/likedSongs";
 import "./style.css"
 // import likedLogo from '../../assets/'
 
 const LikesDisplay = ({ song, likes }) => {
   const [currentLikes, setCurrentLikes] = useState(parseInt(likes))
   const [currentSong, setCurrentSong] = useState(song)
-  const [liked, setLiked] = useState(false)
+  const [liked, setLiked] = useState()
+
+  const dispatch = useDispatch()
+  const likedSongs = useSelector(state => state.likedSongs)
+  const { addLikedSong, removeLikedSong } = bindActionCreators(actionCreators, dispatch)
+  console.log(likedSongs)
 
   useEffect(() => {
     setCurrentSong(song)
-    setCurrentLikes(likes)
-    setLiked(false)
+    if (likedSongs.likedSongs.includes(song)) {
+      setLiked(true);
+      setCurrentLikes(likes + 1);
+    } else {
+      setLiked(false)
+      setCurrentLikes(likes)
+    }
   }, [song])
 
   const handeClick = (e) => {
     if (liked) {
+      removeLikedSong(currentSong)
       setCurrentLikes((likes) => likes - 1)
       setLiked(false)
     } else {
+      if (likedSongs.likedSongs.includes(currentSong) === false) {
+        addLikedSong(currentSong);
+      }
       setCurrentLikes((likes) => likes + 1)
       setLiked(true)
     }
