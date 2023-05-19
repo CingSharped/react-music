@@ -9,7 +9,7 @@ const likedSongsReducer = (state = initialState, action) => {
     case "ADD":
       return {...state, likedSongs: [...state.likedSongs, action.payload]}
     case "REMOVE":
-      return {... state, likedSongs: [...state.likedSongs, action.payload]}
+      return {... state, likedSongs: [...state.likedSongs.filter(song => song !== action.payload)]}
     default:
       return state
   }

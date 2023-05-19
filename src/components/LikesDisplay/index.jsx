@@ -8,7 +8,7 @@ import "./style.css"
 const LikesDisplay = ({ song, likes }) => {
   const [currentLikes, setCurrentLikes] = useState(parseInt(likes))
   const [currentSong, setCurrentSong] = useState(song)
-  const [liked, setLiked] = useState(false)
+  const [liked, setLiked] = useState()
 
   const dispatch = useDispatch()
   const likedSongs = useSelector(state => state.likedSongs)
@@ -17,15 +17,24 @@ const LikesDisplay = ({ song, likes }) => {
 
   useEffect(() => {
     setCurrentSong(song)
-    setCurrentLikes(likes)
-    setLiked(false)
+    if (likedSongs.likedSongs.includes(song)) {
+      setLiked(true);
+      setCurrentLikes(likes + 1);
+    } else {
+      setLiked(false)
+      setCurrentLikes(likes)
+    }
   }, [song])
 
   const handeClick = (e) => {
     if (liked) {
+      removeLikedSong(currentSong)
       setCurrentLikes((likes) => likes - 1)
       setLiked(false)
     } else {
+      if (likedSongs.likedSongs.includes(currentSong) === false) {
+        addLikedSong(currentSong);
+      }
       setCurrentLikes((likes) => likes + 1)
       setLiked(true)
     }
