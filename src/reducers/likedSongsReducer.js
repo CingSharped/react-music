@@ -1,7 +1,7 @@
 
 
 const initialState = {
-  likedSongs: ["Liked songs"]
+  likedSongs: []
 };
 
 const likedSongsReducer = (state = initialState, action) => {

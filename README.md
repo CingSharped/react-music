@@ -17,4 +17,4 @@ A music app made completing ```Music App``` part of challenges from La Fosse Aca
 - Vite
 
 ## Bugs
-- Likes songs do not remain liked after switching to a different album 
+- 'Get their current popularity button doesn't work'

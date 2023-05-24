@@ -1,11 +1,11 @@
 import { useState , useEffect } from "react"
-import "./style.css"
 import { LikesDisplay } from ".."
+import axios from "axios"
+import "./style.css"
 
 const SongsDisplay = ({ songs }) => {
   const [currentSongs, setCurrentSongs] = useState(songs)
-  // const [liked, setLiked] = useState(false)
-
+  
   useEffect(() => {
     setCurrentSongs(songs)
   },[songs])
