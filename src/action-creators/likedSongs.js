@@ -1,17 +1,15 @@
 export const addLikedSong = (song) => {
-  return (dispatch) => {
-    dispatch({
+  return {
       type: "ADD",
       payload: song
-    });
-  };
-};
+    }
+}
+
 
 export const removeLikedSong = (song) => {
-  return (dispatch) => {
-    dispatch({
+  return {
       type: "REMOVE",
       payload: song
-    })
-  }
+    }
 }
+

@@ -13,7 +13,6 @@ const LikesDisplay = ({ song, likes }) => {
   const dispatch = useDispatch()
   const likedSongs = useSelector(state => state.likedSongs)
   const { addLikedSong, removeLikedSong } = bindActionCreators(actionCreators, dispatch)
-  console.log(likedSongs)
 
   useEffect(() => {
     setCurrentSong(song)
@@ -45,12 +44,6 @@ const LikesDisplay = ({ song, likes }) => {
       <div className="likes-container">
         <h3 id="likes-display">Likes: {currentLikes}</h3>
         <button onClick={handeClick}>{liked ? "Unlike" : "Like"}</button>
-        {liked ? (
-          // <img width="25px" src={likedLogo} alt="" />
-          <p>Image goes here</p>
-        ) : (
-          <></>
-        )}
       </div>
     </>
   )
