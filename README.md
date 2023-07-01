@@ -8,6 +8,7 @@ A music app made completing ```Music App``` part of challenges from La Fosse Aca
 4. [React Navigation Exercises](https://github.com/LaFosseAcademy/react-exercises/blob/react-navigation-exercises/instructions.md) ✅
 5. [React Testing Exercises](https://github.com/LaFosseAcademy/react-exercises/blob/react-testing-exercises/instructions.md) ❌
 6. [React useContext Exercises](https://github.com/LaFosseAcademy/react-exercises/blob/react-useContext-exercises/instructions.md) ✅
+7. [Redux Exercises](https://github.com/LaFosseAcademy/react-exercises/blob/redux-exercises/instructions.md) ❌
 
 ## Installation & Usage
 
@@ -16,4 +17,4 @@ A music app made completing ```Music App``` part of challenges from La Fosse Aca
 - Vite
 
 ## Bugs
-- Likes songs do not remain liked after switching to a different album 
+- 'Get their current popularity button doesn't work'

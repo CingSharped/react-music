@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
+    background-color: firebrick;
+    padding: 20px;
 }
 
 .form-container input {
