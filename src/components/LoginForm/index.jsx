@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState, useRef, useEffect} from 'react'
+import { useUsername } from "../../contexts";
+import axios from 'axios'
 import './styles.css'
 
 const LoginForm = () => {
@@ -16,16 +18,19 @@ const LoginForm = () => {
 
   const handleUsername = (e) => {
     e.preventDefault()
-    setUsernameInput(usernameInput)
+    setUsernameInput(e.target.value)
   }
   const handlePassword = (e) => {
     e.preventDefault()
-    setPasswordInput(passwordInput)
+    setPasswordInput(e.target.value)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    
+    const response = await axios.post('https://react-music-api-iwdg.onrender.com/users/login',
+    {username: usernameInput, password: passwordInput})
+    console.log(response)
+
   }
 
   return (
@@ -42,7 +47,7 @@ const LoginForm = () => {
         ref={inputRef}
       />
 
-      <label htmlFor="password">Username</label>
+      <label htmlFor="password">Password</label>
       <input
         type="text"
         placeholder="Sup3rco0lp@assword"

@@ -1,12 +1,11 @@
 import React from 'react'
 
-import { ArtistDisplay, LoginForm, UserForm } from '../../components'
+import { ArtistDisplay, LoginForm } from '../../components'
 
 const Home = () => {
   return (
     <>
       <LoginForm />
-      <UserForm />
       <ArtistDisplay />
     </>
   )
