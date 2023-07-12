@@ -39,6 +39,7 @@ const LoginForm = () => {
 
       <label htmlFor="username">Username</label>
       <input
+      className='input-field'
         type="text"
         placeholder="Username"
         aria-label="Username textbox"
@@ -49,6 +50,7 @@ const LoginForm = () => {
 
       <label htmlFor="password">Password</label>
       <input
+        className='input-field'
         type="text"
         placeholder="Sup3rco0lp@assword"
         aria-label="Password textbox"
