@@ -10,43 +10,7 @@ const ArtistDisplay = () => {
     imageUrl:
       "https://townsquare.media/site/366/files/2014/12/Linkin-Park.jpg?w=980&q=75",
   });
-  const [accessToken, setAccessToken] = useState("");
 
-  useEffect(() => {
-    if (accessToken !== "") {
-      fetch(
-        `https://api.spotify.com/v1/search?q=${currentArtist.name}&type=artist`,
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        }
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          const artist = data.artists.items[0];
-          setCurrentArtist({
-            name: artist.name,
-            followers: artist.followers.total,
-            popularity: artist.popularity,
-            imageUrl: artist.images[0].url,
-          });
-        })
-        .catch((error) => console.log(error));
-    }
-  }, [accessToken]);
-
-  const handleGetPopularityData = () => {
-    const authEndpoint = "https://accounts.spotify.com/authorize";
-    const clientId = import.meta.env.VITE_CLIENT_ID;
-    const redirectUri = "http://localhost:3000";
-    const scopes = ["user-read-private", "user-read-email", "user-follow-read"];
-    const url = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-      "%20"
-    )}&response_type=token&show_dialog=true`;
-
-    window.location.href = url;
-  };
 
   return (
     <>
@@ -81,11 +45,6 @@ const ArtistDisplay = () => {
             heavy metal and hip hop, while their later music features more
             electronica and pop elements.
           </p>
-          {accessToken === "" && (
-              <button onClick={handleGetPopularityData}>
-                Get their current popularity data
-              </button>
-            )}
         </div>
       </div>
     </>

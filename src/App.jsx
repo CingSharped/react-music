@@ -12,7 +12,9 @@ function App() {
           <Route path="/" element={<NavBar />}>
             <Route index element={<Pages.Home />} />
             <Route path="/albums" element={<Pages.Albums />} />
-
+            <Route path="/login" element={<Pages.Login />} />
+            <Route path="/signup" element={<Pages.Signup />} />
+            
             <Route path="*" element={<Pages.NotFound />} />
           </Route>
         </Routes>
