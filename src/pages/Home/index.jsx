@@ -5,7 +5,6 @@ import { ArtistDisplay, LoginForm } from '../../components'
 const Home = () => {
   return (
     <>
-      <LoginForm />
       <ArtistDisplay />
     </>
   )

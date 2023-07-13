@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import { useUsername } from "../../contexts";
 import axios from 'axios'
 import './styles.css'
@@ -34,31 +35,35 @@ const SignupForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="signup-container">
-      <h2>Login</h2>
+    <>
+      <form onSubmit={handleSubmit} className="signup-container">
+        <h2>Signup</h2>
 
-      <label htmlFor="username">Username</label>
-      <input
-      className='input-field'
-        type="text"
-        placeholder="Username"
-        aria-label="Username textbox"
-        value={usernameInput}
-        onChange={handleUsername}
-        ref={inputRef}
-      />
+        <label htmlFor="username">Username</label>
+        <input
+          className="input-field"
+          type="text"
+          placeholder="Username"
+          aria-label="Username textbox"
+          value={usernameInput}
+          onChange={handleUsername}
+          ref={inputRef}
+        />
 
-      <label htmlFor="password">Password</label>
-      <input
-        className='input-field'
-        type="text"
-        placeholder="Sup3rco0lp@assword"
-        aria-label="Password textbox"
-        value={passwordInput}
-        onChange={handlePassword}
-      />
-      <button type="submit">Submit</button>
-    </form>
+        <label htmlFor="password">Password</label>
+        <input
+          className="input-field"
+          type="text"
+          placeholder="Sup3rco0lp@assword"
+          aria-label="Password textbox"
+          value={passwordInput}
+          onChange={handlePassword}
+        />
+        <button type="submit">Submit</button>
+      </form>
+
+      <Link to="/login">Login</Link>
+    </>
   );
 }
 

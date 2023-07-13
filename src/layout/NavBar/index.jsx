@@ -44,7 +44,7 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <h2>{username ? `${username}\'s Music` : 'Music'}</h2>
+        <h2>{username ? `${username}\'s Music` : "Music"}</h2>
         <ul className="nav-links">
           <li>
             <NavLink style={navA} to="/">
@@ -54,6 +54,11 @@ const NavBar = () => {
           <li>
             <NavLink style={navA} to="/albums">
               Albums
+            </NavLink>
+          </li>
+          <li>
+            <NavLink style={navA} to="/login">
+              Login / Signup
             </NavLink>
           </li>
         </ul>
