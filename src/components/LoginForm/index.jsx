@@ -1,13 +1,17 @@
-import React, { useState, useRef, useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useRef, useEffect} from 'react'
+import { Link , useNavigate } from 'react-router-dom'
 import { useUsername } from "../../contexts";
+import { bindActionCreators } from "redux";
+import * as actionCreators from "../../action-creators/likedSongs";
 import axios from 'axios'
 import './styles.css'
 
 const LoginForm = () => {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
-
+  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const { addLikedSong, removeLikedSong } = bindActionCreators(actionCreators, dispatch)
   const { setUsername } = useUsername()
   const inputRef = useRef();
 
@@ -31,7 +35,11 @@ const LoginForm = () => {
     const response = await axios.post('https://react-music-api-iwdg.onrender.com/users/login',
     {username: usernameInput, password: passwordInput})
     console.log(response)
-
+    if (response.status == 200) {
+      setUsername(response.data.username)
+      response.data.likedSongs.map(song => addLikedSong(song))
+      navigate("/albums")
+    }
   }
 
   return (
@@ -53,7 +61,7 @@ const LoginForm = () => {
         <label htmlFor="password">Password</label>
         <input
           className="input-field"
-          type="text"
+          type="password"
           placeholder="Sup3rco0lp@assword"
           aria-label="Password textbox"
           value={passwordInput}

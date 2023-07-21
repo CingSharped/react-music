@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./style.css";
 
 const ArtistDisplay = () => {
-  console.log(import.meta.env.VITE_CLIENT_ID);
   const [currentArtist, setCurrentArtist] = useState({
     name: "Linkin Park",
     followers: null,

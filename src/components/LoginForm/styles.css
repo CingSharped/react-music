@@ -11,12 +11,12 @@
     margin: 20px auto 20px auto;
     background-color: #282828;
   
-    .input-field {
-      margin-bottom: 20px;
-      padding: 5px;
-      height: 20px;
-    }
-  
-    label {
-      text-align: left;
-    }
+.input-field {
+  margin-bottom: 20px;
+  padding: 5px;
+  height: 20px;
+}
+
+label {
+  text-align: left;
+}

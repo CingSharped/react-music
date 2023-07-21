@@ -17,4 +17,3 @@ A music app made completing ```Music App``` part of challenges from La Fosse Aca
 - Vite
 
 ## Bugs
-- 'Get their current popularity button doesn't work'

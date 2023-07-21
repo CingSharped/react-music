@@ -57,9 +57,13 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink style={navA} to="/login">
+            {!username && <NavLink style={navA} to="/login">
               Login / Signup
-            </NavLink>
+            </NavLink>}
+
+            {username && <NavLink style={navA} to="/">
+              Logout
+            </NavLink>}
           </li>
         </ul>
       </nav>

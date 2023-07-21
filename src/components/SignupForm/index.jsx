@@ -31,6 +31,9 @@ const SignupForm = () => {
     const response = await axios.post('https://react-music-api-iwdg.onrender.com/users/signup',
     {username: usernameInput, password: passwordInput})
     console.log(response)
+    if (Request.status == 200) {
+      
+    }
 
   }
 
@@ -53,7 +56,7 @@ const SignupForm = () => {
         <label htmlFor="password">Password</label>
         <input
           className="input-field"
-          type="text"
+          type="password"
           placeholder="Sup3rco0lp@assword"
           aria-label="Password textbox"
           value={passwordInput}
