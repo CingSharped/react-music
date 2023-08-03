@@ -18,10 +18,10 @@ const LikesDisplay = ({ song, likes }) => {
     setCurrentSong(song)
     if (likedSongs.likedSongs.includes(song)) {
       setLiked(true);
-      setCurrentLikes(likes + 1);
+      setCurrentLikes(parseInt(likes) + 1);
     } else {
       setLiked(false)
-      setCurrentLikes(likes)
+      setCurrentLikes(parseInt(likes))
     }
   }, [song])
 
