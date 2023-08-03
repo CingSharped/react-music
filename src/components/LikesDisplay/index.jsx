@@ -28,24 +28,22 @@ const LikesDisplay = ({ song, likes }) => {
   const handeClick = (e) => {
     if (liked) {
       removeLikedSong(currentSong)
-      setCurrentLikes((likes) => likes - 1)
+      setCurrentLikes((likes) => parseInt(likes) - 1)
       setLiked(false)
     } else {
       if (likedSongs.likedSongs.includes(currentSong) === false) {
         addLikedSong(currentSong);
       }
-      setCurrentLikes((likes) => likes + 1)
+      setCurrentLikes((likes) => parseInt(likes) + 1)
       setLiked(true)
     }
   }
 
   return (
-    <>
       <div className="likes-container">
-        <h3 id="likes-display">Likes: {currentLikes}</h3>
-        <button onClick={handeClick}>{liked ? "Unlike" : "Like"}</button>
+        <h3 id="likes-display" className="likes-display">Likes: {currentLikes}</h3>
+        <button className="like-button" onClick={handeClick}>{liked ? "Unlike" : "Like"}</button>
       </div>
-    </>
   )
 }
 

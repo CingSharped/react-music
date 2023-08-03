@@ -5,3 +5,11 @@
     padding: 2px;
     justify-content: center;
 }
+
+.likes-display {
+    margin-right: 10px;
+}
+
+.like-button {
+    width: 100px;
+}

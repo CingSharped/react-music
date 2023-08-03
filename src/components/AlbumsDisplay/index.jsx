@@ -7,7 +7,7 @@ const AlbulmsDisplay = () => {
   const [selectedAlbum, setSelectedAlbum] = useState([])
 
   return (
-    <>
+    <div className="albums-display-container">
       <h2>Albums</h2>
       <div className="albums-container">
         {albums.map((album, key) => {
@@ -23,7 +23,7 @@ const AlbulmsDisplay = () => {
         })}
       </div>
       {selectedAlbum.songs ? <SongsDisplay songs={selectedAlbum.songs}/> : <></>}
-    </>
+    </div>
   )
 }
 

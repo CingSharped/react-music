@@ -1,3 +1,12 @@
+.albums-display-container {
+    width: 800px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 8px 8px #000000a7;
+    padding: 20px;
+    background-color: #282828;
+}
+
 .albums-container {
     max-width: 800px;
     display: flex;
